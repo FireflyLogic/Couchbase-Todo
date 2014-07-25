@@ -95,12 +95,6 @@
     <AssemblyName>QuickTodoiOS</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SQLite.Net">
-      <HintPath>..\packages\SQLite.Net-PCL.2.3.0\lib\portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLite.Net.Platform.XamarinIOS">
-      <HintPath>..\packages\SQLite.Net.Platform.XamarinIOS.2.3.0\lib\monotouch\SQLite.Net.Platform.XamarinIOS.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
@@ -129,7 +123,6 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Icon.png" />
-    <BundleResource Include="Resources\TodoSQLite.db3" />
     <BundleResource Include="Resources\check%402x.png" />
     <BundleResource Include="Resources\check.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
@@ -148,7 +141,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="TextToSpeech_iOS.cs" />
-    <Compile Include="SQLite_iOS.cs" />
   </ItemGroup>
   <Import Project="..\Todo.Shared\Todo.Shared.projitems" Label="Shared" Condition="Exists('..\Todo.Shared\Todo.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />

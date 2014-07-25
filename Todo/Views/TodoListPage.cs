@@ -82,26 +82,12 @@ namespace Todo
 			}
 
 			ToolbarItems.Add (tbi);
-
-			if (Device.OS == TargetPlatform.iOS) {
-				var tbi2 = new ToolbarItem ("?", null, () => {
-					var todos = App.Database.GetItemsNotDone();
-					var tospeak = "";
-					foreach (var t in todos)
-						tospeak += t.Name + " ";
-					if (tospeak == "") tospeak = "there are no tasks to do";
-
-					DependencyService.Get<ITextToSpeech>().Speak(tospeak);
-				}, 0, 0);
-				ToolbarItems.Add (tbi2);
-			}
-
 		}
 
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
-			listView.ItemsSource = App.Database.GetItems();
+			listView.ItemsSource = App.Database.Items;
 		}
 	}
 }

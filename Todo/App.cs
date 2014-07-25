@@ -17,7 +17,6 @@ namespace Todo
 		public static ITodoItemDatabase Database {
 			get { 
 				if (database == null) {
-					//database = new  SqlLiteTodoItemDatabase ();
 					database = DependencyService.Get<ITodoItemDatabase> ();
 				}
 				return database; 

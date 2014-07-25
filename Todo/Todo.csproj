@@ -38,9 +38,7 @@
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Views\TodoItemCell.cs" />
     <Compile Include="ITextToSpeech.cs" />
-    <Compile Include="ISQLite.cs" />
     <Compile Include="Data\ITodoItemDatabase.cs" />
-    <Compile Include="Data\SqlLiteTodoItemDatabase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.1.1.0.6201/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
