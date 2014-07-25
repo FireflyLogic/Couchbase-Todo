@@ -100,7 +100,8 @@ namespace Todo.Shared
 
 		public void DeleteItem (string id)
 		{
-			db.DeleteLocalDocument (id);
+			var doc = db.GetDocument(id);	
+			doc.Delete ();
 		}
 
 		#endregion
